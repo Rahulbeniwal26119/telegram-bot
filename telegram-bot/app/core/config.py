@@ -29,9 +29,8 @@ settings = Settings()
 
 try:
     import pathlib
-    fp = pathlib.Path("../../confidentals.json").open()
+    fp = pathlib.Path("confidential.json").open()
     secrets = json.load(fp, 'utf-8')
-    print("secrets", secrets)
     settings.BOT_TOKEN = secrets["telegram_bot_token"]
 except Exception as e:
     print(e)

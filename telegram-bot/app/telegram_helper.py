@@ -14,7 +14,7 @@ def parse_telegram_callback_request_data(message):
 
 
 def send_message(chat_id, text="Hii from webhook side"):
-    url = f'https://api.telegram.org/bot{settings.BOT_TOKEN}sendMessage'
+    url = f'https://api.telegram.org/bot{settings.BOT_TOKEN}/sendMessage'
     payload = {
         "chat_id": chat_id,
         "text": text
